@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="006c7d5d-26e2-4007-ada7-678985b8819c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/online-ev-market-backend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/router.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/.idea/online-ev-market-frontend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/craco.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/App.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/layouts/MainLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/HomePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/SignInPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/SignUpPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/react-app-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/reportWebVitals.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/setupTests.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/store/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/tsconfig.paths.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GgbTAmbnahlvKduiTZ4C97EUds" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.17.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Audrius\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\CodeAcademy_baigiamasis_projektas\\Online-EV-Market\\online-ev-market-backend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="006c7d5d-26e2-4007-ada7-678985b8819c" name="Changes" comment="" />
+      <created>1666813178619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666813178619</updated>
+      <workItem from="1666813179792" duration="4797000" />
+      <workItem from="1666818637236" duration="399000" />
+      <workItem from="1666819063289" duration="369000" />
+      <workItem from="1666819471291" duration="85000" />
+      <workItem from="1666819565584" duration="65000" />
+      <workItem from="1666819643229" duration="156000" />
+      <workItem from="1666819814842" duration="357000" />
+      <workItem from="1666820201300" duration="915000" />
+      <workItem from="1666821168996" duration="346000" />
+      <workItem from="1666821536421" duration="984000" />
+      <workItem from="1666822570067" duration="315000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
