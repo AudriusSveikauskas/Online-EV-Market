@@ -56,7 +56,7 @@ if (typeof secret === 'string') {
 app.use(
   cors({
     origin: process.env.CORS_ORIGIN,
-    preflightContinue: true,
+    // preflightContinue: true,
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   }),

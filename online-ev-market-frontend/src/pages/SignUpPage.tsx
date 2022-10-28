@@ -11,6 +11,7 @@ import {
 
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { useNavigate } from 'react-router-dom';
+import postFetch from '@/services/fetch/postFetch';
 
 const SignUpPage: React.FC = () => {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const SignUpPage: React.FC = () => {
     navigate('/sign-in');
   };
 
-  const formSubmitHandler = (e: FormEvent<HTMLFormElement>) => {
+  const formSubmitHandler = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const formElements = form.elements as typeof form.elements & {
@@ -27,24 +28,25 @@ const SignUpPage: React.FC = () => {
       lastName: HTMLInputElement;
       email: HTMLInputElement;
       password: HTMLInputElement;
-      repeatedPassword: HTMLInputElement;
+      password2: HTMLInputElement;
     };
     const formData = {
       firstName: formElements.firstName.value,
       lastName: formElements.lastName.value,
       email: formElements.email.value,
       password: formElements.password.value,
-      repeatedPassword: formElements.repeatedPassword.value,
+      password2: formElements.password2.value,
     };
 
-    console.log(formData);
+    const res = await postFetch('sign-up', formData);
+    console.log(res);
   };
 
   return (
     <Card
       elevation={4}
       sx={{
-        maxWidth: '400px',
+        maxWidth: '440px',
         marginX: { xs: 2, sm: 'auto' },
         mt: 4,
         p: 4,
@@ -82,7 +84,6 @@ const SignUpPage: React.FC = () => {
             />
 
             <TextField
-              error
               id="last-name-input"
               name="lastName"
               label="Last Name *"
@@ -106,7 +107,7 @@ const SignUpPage: React.FC = () => {
 
           <TextField
             id="password-repeat-input"
-            name="repeatedPassword"
+            name="password2"
             label="Repeat Password *"
             variant="outlined"
           />
@@ -120,7 +121,10 @@ const SignUpPage: React.FC = () => {
         <Button
           sx={{
             textTransform: 'none',
-            ':hover': { textDecoration: 'underline', backgroundColor: 'white' },
+            ':hover': {
+              textDecoration: 'underline',
+              backgroundColor: 'white',
+            },
           }}
           onClick={signInLinkHandler}
           variant="text"

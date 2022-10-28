@@ -3,7 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="006c7d5d-26e2-4007-ada7-678985b8819c" name="Changes" comment="init commit">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/user/signInController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/user/signUpController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/normalizeName.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middleware/email/emailAddressValidator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middleware/email/isEmailUniqueValidator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middleware/nameValidator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middleware/passwordValidator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/userModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/userRoute.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/fetch/getFetch.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/fetch/postFetch.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/layouts/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/layouts/MainLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/SignInPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/SignInPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/SignUpPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/SignUpPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +71,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CodeAcademy_baigiamasis_projektas\Online-EV-Market\online-ev-market-backend\src\middleware\email" />
+      <recent name="D:\CodeAcademy_baigiamasis_projektas\Online-EV-Market\online-ev-market-backend\src\controllers\user" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -70,7 +95,9 @@
       <workItem from="1666820201300" duration="915000" />
       <workItem from="1666821168996" duration="346000" />
       <workItem from="1666821536421" duration="984000" />
-      <workItem from="1666822570067" duration="698000" />
+      <workItem from="1666822570067" duration="1313000" />
+      <workItem from="1666857165363" duration="596000" />
+      <workItem from="1666938645759" duration="17062000" />
     </task>
     <task id="LOCAL−00001" summary="init commit">
       <created>1666822996329</created>
@@ -78,7 +105,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1666822996329</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="init commit">
+      <created>1666823305083</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1666823305083</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
