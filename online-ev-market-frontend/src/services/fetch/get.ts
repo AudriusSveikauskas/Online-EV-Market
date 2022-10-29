@@ -1,10 +1,8 @@
-const getFetch = async (endpoint: string) => {
+const get = async (endpoint: string) => {
   const options = {
     method: 'GET',
     credentials: 'include',
-    headers: {
-      'content-type': 'application/json',
-    },
+    headers: { 'content-type': 'application/json' },
   };
 
   const res = await fetch(
@@ -14,4 +12,4 @@ const getFetch = async (endpoint: string) => {
   return res.json();
 };
 
-export default getFetch;
+export default get;

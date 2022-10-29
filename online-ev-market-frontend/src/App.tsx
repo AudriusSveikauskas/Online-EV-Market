@@ -25,9 +25,9 @@ const App = () => (
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="/sign-up" element={<SignUpPage />} />
-          <Route path="/sign-in" element={<SignInPage />} />
         </Route>
+        <Route path="/sign-up" element={<SignUpPage />} />
+        <Route path="/sign-in" element={<SignInPage />} />
       </Routes>
     </BrowserRouter>
   </ThemeProvider>

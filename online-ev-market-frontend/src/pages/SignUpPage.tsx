@@ -1,4 +1,4 @@
-import React, { FormEvent } from 'react';
+import React, { FormEvent, useState } from 'react';
 
 import {
   Avatar,
@@ -11,17 +11,31 @@ import {
 
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { useNavigate } from 'react-router-dom';
-import postFetch from '@/services/fetch/postFetch';
+import axios from 'axios';
+import post from '@/services/fetch/post';
+import AlertMsg from '@/helpers/AlertMsg';
 
 const SignUpPage: React.FC = () => {
   const navigate = useNavigate();
+
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [dialogMsg, setDialogMsg] = useState({
+    title: '',
+    contentText: '',
+    status: -1,
+  });
 
   const signInLinkHandler = () => {
     navigate('/sign-in');
   };
 
+  const dialogOnClickHandler = () => {
+    setDialogOpen(false);
+  };
+
   const formSubmitHandler = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     const form = e.currentTarget;
     const formElements = form.elements as typeof form.elements & {
       firstName: HTMLInputElement;
@@ -38,8 +52,35 @@ const SignUpPage: React.FC = () => {
       password2: formElements.password2.value,
     };
 
-    const res = await postFetch('sign-up', formData);
-    console.log(res);
+    try {
+      const res = await post('sign-up', formData);
+
+      if (res.data) {
+        localStorage.setItem(
+          'user',
+          JSON.stringify(res.data.payload[0].accessToken),
+        );
+
+        navigate(
+          `/sign-in?response=${JSON.stringify({
+            status: res.status,
+            title: res.data.title,
+            message: res.data.message,
+          })}`,
+        );
+      }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        if (error.response) {
+          setDialogMsg({
+            title: error.response.data.title,
+            contentText: error.response.data.message,
+            status: error.response.status as number,
+          });
+          setDialogOpen(true);
+        }
+      }
+    }
   };
 
   return (
@@ -80,7 +121,6 @@ const SignUpPage: React.FC = () => {
               name="firstName"
               label="First Name *"
               variant="outlined"
-              helperText=""
             />
 
             <TextField
@@ -132,6 +172,11 @@ const SignUpPage: React.FC = () => {
           Already have an account? Sign in
         </Button>
       </Box>
+      <AlertMsg
+        msg={dialogMsg}
+        open={dialogOpen}
+        onClick={dialogOnClickHandler}
+      />
     </Card>
   );
 };

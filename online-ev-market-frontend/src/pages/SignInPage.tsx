@@ -1,4 +1,6 @@
-import React, { FormEvent } from 'react';
+import React, { FormEvent, useEffect, useState } from 'react';
+
+import { useNavigate } from 'react-router-dom';
 
 import {
   Avatar,
@@ -10,14 +12,25 @@ import {
 } from '@mui/material';
 
 import LockOpenIcon from '@mui/icons-material/LockOpen';
-import { useNavigate } from 'react-router-dom';
-import postFetch from '@/services/fetch/postFetch';
+import post from '@/services/fetch/post';
+import AlertMsg from '@/helpers/AlertMsg';
 
 const SignInPage: React.FC = () => {
   const navigate = useNavigate();
 
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [dialogMsg, setDialogMsg] = useState({
+    title: '',
+    contentText: '',
+    status: -1,
+  });
+
   const signInLinkHandler = () => {
     navigate('/sign-up');
+  };
+
+  const dialogOnClickHandler = () => {
+    setDialogOpen(false);
   };
 
   const formSubmitHandler = async (e: FormEvent<HTMLFormElement>) => {
@@ -32,9 +45,28 @@ const SignInPage: React.FC = () => {
       password: formElements.password.value,
     };
 
-    const res = await postFetch('sign-in', formData);
+    const res = await post('sign-in', formData);
+    console.log('atsakymas-----------');
     console.log(res);
   };
+
+  useEffect(() => {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const response = urlParams.get('response');
+
+    if (response) {
+      const res = JSON.parse(response);
+
+      setDialogMsg({
+        title: res.title,
+        contentText: res.message,
+        status: res.status,
+      });
+
+      setDialogOpen(true);
+    }
+  }, []);
 
   return (
     <Card
@@ -101,6 +133,11 @@ const SignInPage: React.FC = () => {
           Don&apos;t have an account? Sign Up
         </Button>
       </Box>
+      <AlertMsg
+        msg={dialogMsg}
+        open={dialogOpen}
+        onClick={dialogOnClickHandler}
+      />
     </Card>
   );
 };

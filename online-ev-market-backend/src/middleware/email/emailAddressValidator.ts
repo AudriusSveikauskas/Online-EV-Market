@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import EmailValidator from 'email-validator';
+import responseMessage from '../../helpers/responseMessage';
 
 const emailAddressValidator = (
   req: Request,
@@ -11,12 +12,12 @@ const emailAddressValidator = (
   const isEmailValid = EmailValidator.validate(email);
 
   if (!isEmailValid) {
-    res.status(400).send({
-      msg: 'The email address is not valid!',
-    });
+    return res
+      .status(400)
+      .send(responseMessage(400, `The email address ${email} is not valid!`));
   }
 
-  req.body.email = email.toUpperCase();
+  req.body.email = email.toLowerCase();
 
   return next();
 };

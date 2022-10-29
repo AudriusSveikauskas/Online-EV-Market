@@ -3,26 +3,34 @@
   <component name="ChangeListManager">
     <list default="true" id="006c7d5d-26e2-4007-ada7-678985b8819c" name="Changes" comment="init commit">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/user/signInController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/user/signUpController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/normalizeName.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/email/emailAddressValidator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/email/isEmailUniqueValidator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/nameValidator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/passwordValidator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/userModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/userRoute.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/auth/hashPassword.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/auth/validatePassword.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/responseMessage.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/helpers/responseStatusTitle.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middleware/passwordFormatValidator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/middleware/userValidator.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/fetch/getFetch.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/fetch/postFetch.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/helpers/AlertMsg.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/fetch/post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user/signInController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user/signInController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user/signUpController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user/signUpController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/layouts/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/layouts/MainLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/email/emailAddressValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/email/emailAddressValidator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/email/isEmailUniqueValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/email/isEmailUniqueValidator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/nameValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/nameValidator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/passwordValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/passwordValidator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/userRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/userRoute.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/SignInPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/SignInPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/SignUpPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/SignUpPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/fetch/getFetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/fetch/get.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/fetch/postFetch.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +81,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CodeAcademy_baigiamasis_projektas\Online-EV-Market\online-ev-market-backend\src\helpers\auth" />
+      <recent name="D:\CodeAcademy_baigiamasis_projektas\Online-EV-Market\online-ev-market-backend\src\middleware" />
       <recent name="D:\CodeAcademy_baigiamasis_projektas\Online-EV-Market\online-ev-market-backend\src\middleware\email" />
       <recent name="D:\CodeAcademy_baigiamasis_projektas\Online-EV-Market\online-ev-market-backend\src\controllers\user" />
     </key>
@@ -97,7 +107,11 @@
       <workItem from="1666821536421" duration="984000" />
       <workItem from="1666822570067" duration="1313000" />
       <workItem from="1666857165363" duration="596000" />
-      <workItem from="1666938645759" duration="17062000" />
+      <workItem from="1666938645759" duration="17645000" />
+      <workItem from="1667032592041" duration="7366000" />
+      <workItem from="1667046802045" duration="706000" />
+      <workItem from="1667047533344" duration="4774000" />
+      <workItem from="1667061494547" duration="6329000" />
     </task>
     <task id="LOCAL−00001" summary="init commit">
       <created>1666822996329</created>

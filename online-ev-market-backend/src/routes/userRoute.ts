@@ -3,8 +3,10 @@ import signUpController from '../controllers/user/signUpController';
 import signInController from '../controllers/user/signInController';
 import emailAddressValidator from '../middleware/email/emailAddressValidator';
 import isEmailUniqueValidator from '../middleware/email/isEmailUniqueValidator';
-import passwordValidator from '../middleware/passwordValidator';
+import passwordFormatValidator from '../middleware/passwordFormatValidator';
 import nameValidator from '../middleware/nameValidator';
+import passwordValidator from '../middleware/passwordValidator';
+import userValidator from '../middleware/userValidator';
 
 const userRoute = express.Router();
 
@@ -13,10 +15,10 @@ userRoute.post(
   nameValidator,
   emailAddressValidator,
   isEmailUniqueValidator,
-  passwordValidator,
+  passwordFormatValidator,
   signUpController,
 );
 
-userRoute.post('/sign-in', emailAddressValidator, signInController);
+userRoute.post('/sign-in', userValidator, passwordValidator, signInController);
 
 export default userRoute;

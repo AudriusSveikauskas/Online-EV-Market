@@ -1,56 +1,23 @@
 import { NextFunction, Request, Response } from 'express';
+import validatePassword from '../helpers/auth/validatePassword';
 
-const passwordValidator = (req: Request, res: Response, next: NextFunction) => {
-  const { password, password2 } = req.body;
+const passwordValidator = async (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => {
+  const { password, user } = req.body;
 
-  if (password.length < 6) {
-    return res.status(400).send({
-      msg: 'Passwords must be at least 6 characters long!',
+  const validPassword = await validatePassword(password, user.password);
+
+  if (!validPassword) {
+    console.log('no');
+    return res.send({
+      ok: 'NO',
     });
   }
 
-  let hasLowerCase = false;
-  let hasUpperCase = false;
-  let hasNumber = false;
-
-  password.split('').forEach((char: string) => {
-    if (char === char.toLowerCase() && Number.isNaN(Number(char))) {
-      hasLowerCase = true;
-    }
-
-    if (char === char.toUpperCase() && Number.isNaN(Number(char))) {
-      hasUpperCase = true;
-    }
-
-    if (!Number.isNaN(Number(char))) {
-      hasNumber = true;
-    }
-  });
-
-  if (!hasLowerCase) {
-    return res.status(400).send({
-      msg: 'Password should have at least one lowercase letter!',
-    });
-  }
-
-  if (!hasUpperCase) {
-    return res.status(400).send({
-      msg: 'Password should have at least one uppercase letter!',
-    });
-  }
-
-  if (!hasNumber) {
-    return res.status(400).send({
-      msg: 'Password should have at least one number!',
-    });
-  }
-
-  if (password !== password2) {
-    return res.status(400).send({
-      msg: 'Passwords do not match!',
-    });
-  }
-
+  console.log('ok');
   return next();
 };
 

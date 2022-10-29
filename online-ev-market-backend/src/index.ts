@@ -1,5 +1,5 @@
 import express from 'express';
-import session from 'express-session';
+// import session from 'express-session';
 import cors = require('cors');
 import mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
@@ -37,20 +37,20 @@ if (typeof uri === 'string') {
 }
 
 // express-session
-const secret = process.env.EXPRESS_SESSION_SECRET;
-app.set('trust proxy', 1);
-if (typeof secret === 'string') {
-  app.use(
-    session({
-      secret,
-      resave: false,
-      saveUninitialized: true,
-      cookie: {
-        secure: false,
-      },
-    }),
-  );
-}
+// const secret = process.env.EXPRESS_SESSION_SECRET;
+// app.set('trust proxy', 1);
+// if (typeof secret === 'string') {
+//   app.use(
+//     session({
+//       secret,
+//       resave: false,
+//       saveUninitialized: true,
+//       cookie: {
+//         secure: false,
+//       },
+//     }),
+//   );
+// }
 
 // cors
 app.use(
