@@ -56,11 +56,6 @@ const SignUpPage: React.FC = () => {
       const res = await post('sign-up', formData);
 
       if (res.data) {
-        localStorage.setItem(
-          'user',
-          JSON.stringify(res.data.payload[0].accessToken),
-        );
-
         navigate(
           `/sign-in?response=${JSON.stringify({
             status: res.status,
@@ -70,16 +65,20 @@ const SignUpPage: React.FC = () => {
         );
       }
     } catch (error) {
-      if (axios.isAxiosError(error)) {
-        if (error.response) {
-          setDialogMsg({
-            title: error.response.data.title,
-            contentText: error.response.data.message,
-            status: error.response.status as number,
-          });
-          setDialogOpen(true);
-        }
+      if (axios.isAxiosError(error) && error.response) {
+        setDialogMsg({
+          title: error.response.data.title,
+          contentText: error.response.data.message,
+          status: error.response.status as number,
+        });
+      } else {
+        setDialogMsg({
+          title: 'Server Error:',
+          contentText: `${error}. Please contact site administrator.`,
+          status: 500,
+        });
       }
+      setDialogOpen(true);
     }
   };
 
