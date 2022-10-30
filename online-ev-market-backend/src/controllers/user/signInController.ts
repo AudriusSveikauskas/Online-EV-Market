@@ -21,14 +21,13 @@ const signInController = async (req: Request, res: Response) => {
       accessToken,
     });
     res.status(200).json({
-      data: {
-        email: user.email,
+      payload: {
         role: user.role,
       },
       accessToken,
     });
   } catch (error) {
-    console.log(error);
+    console.warn(error);
   }
 };
 

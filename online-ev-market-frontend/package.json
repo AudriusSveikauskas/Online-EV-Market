@@ -60,12 +60,7 @@
           "tsx": "never"
         }
       ],
-      "object-curly-newline": [
-        "error",
-        {
-          "multiline": true
-        }
-      ]
+      "object-curly-newline": ["error", { "consistent": true }]
     },
     "settings": {
       "import/extensions": [

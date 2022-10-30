@@ -14,7 +14,14 @@ const userValidator = async (
   });
 
   if (!user) {
-    return res.status(400).send(responseMessage(400, 'baaaaaaaaad'));
+    return res
+      .status(401)
+      .send(
+        responseMessage(
+          401,
+          'The email address or password you entered is incorrect.',
+        ),
+      );
   }
 
   req.body.user = user;

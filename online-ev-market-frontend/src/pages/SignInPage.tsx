@@ -12,6 +12,7 @@ import {
 } from '@mui/material';
 
 import LockOpenIcon from '@mui/icons-material/LockOpen';
+import axios from 'axios';
 import post from '@/services/fetch/post';
 import AlertMsg from '@/helpers/AlertMsg';
 
@@ -45,9 +46,29 @@ const SignInPage: React.FC = () => {
       password: formElements.password.value,
     };
 
-    const res = await post('sign-in', formData);
-    console.log('atsakymas-----------');
-    console.log(res);
+    try {
+      const res = await post('sign-in', formData);
+      if (res && res.data.payload.role === 'admin') {
+        navigate('/admin');
+      } else {
+        navigate('/');
+      }
+    } catch (error) {
+      if (axios.isAxiosError(error) && error.response) {
+        setDialogMsg({
+          title: error.response.data.title,
+          contentText: error.response.data.message,
+          status: error.response.status as number,
+        });
+      } else {
+        setDialogMsg({
+          title: 'Server Error:',
+          contentText: `${error}. Please contact site administrator.`,
+          status: 500,
+        });
+      }
+      setDialogOpen(true);
+    }
   };
 
   useEffect(() => {
