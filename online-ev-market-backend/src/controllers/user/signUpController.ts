@@ -23,7 +23,7 @@ const signUpController = async (req: Request, res: Response) => {
       },
       secret as Secret,
       {
-        expiresIn: '1h',
+        expiresIn: 60,
       },
     );
     newUser.accessToken = accessToken;

@@ -3,11 +3,13 @@ import signUpController from '../controllers/user/signUpController';
 import signInController from '../controllers/user/signInController';
 import emailAddressValidator from '../middleware/email/emailAddressValidator';
 import isEmailUniqueValidator from '../middleware/email/isEmailUniqueValidator';
-import passwordFormatValidator from '../middleware/passwordFormatValidator';
+import passwordFormatValidator from '../middleware/password/passwordFormatValidator';
 import nameValidator from '../middleware/nameValidator';
-import passwordValidator from '../middleware/passwordValidator';
+import passwordValidator from '../middleware/password/passwordValidator';
 import userValidator from '../middleware/userValidator';
 import authorizationController from '../controllers/user/authorizationController';
+import tokenValidator from '../middleware/auth/tokenValidator';
+import roleValidator from '../middleware/auth/roleValidator';
 
 const userRoute = express.Router();
 
@@ -22,6 +24,6 @@ userRoute.post(
 
 userRoute.post('/sign-in', userValidator, passwordValidator, signInController);
 
-userRoute.post('/auth', authorizationController);
+userRoute.post('/auth', tokenValidator, roleValidator, authorizationController);
 
 export default userRoute;

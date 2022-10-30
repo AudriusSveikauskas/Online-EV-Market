@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
-import validatePassword from '../helpers/auth/validatePassword';
-import responseMessage from '../helpers/responseMessage';
+import validatePassword from '../../helpers/auth/validatePassword';
+import responseMessage from '../../helpers/responseMessage';
 
 const passwordValidator = async (
   req: Request,

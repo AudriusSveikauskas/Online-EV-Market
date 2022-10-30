@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import responseMessage from '../helpers/responseMessage';
+import responseMessage from '../../helpers/responseMessage';
 
 const passwordFormatValidator = (
   req: Request,
