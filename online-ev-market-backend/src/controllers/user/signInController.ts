@@ -17,10 +17,17 @@ const signInController = async (req: Request, res: Response) => {
       },
     );
 
-    await UserModel.findByIdAndUpdate(user._id, {
+    await UserModel.findByIdAndUpdate(user._id.toString(), {
       accessToken,
     });
-    res.status(200).json({
+
+    req.session.user = {
+      _id: user._id.toString(),
+      accessToken,
+      role: user.role,
+    };
+
+    return res.status(200).json({
       payload: {
         role: user.role,
       },

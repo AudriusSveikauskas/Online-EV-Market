@@ -3,17 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="006c7d5d-26e2-4007-ada7-678985b8819c" name="Changes" comment="init commit">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/user/authorizationController.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/localStorage/getItem.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/localStorage/removeItem.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/localStorage/setItem.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/user/signInController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user/signInController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/passwordValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/passwordValidator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/userValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/userValidator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/SignInPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/SignInPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user/signUpController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user/signUpController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/userRoute.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/userRoute.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/HomePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/fetch/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/fetch/post.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +93,8 @@
       <workItem from="1667046802045" duration="706000" />
       <workItem from="1667047533344" duration="4774000" />
       <workItem from="1667061494547" duration="10728000" />
-      <workItem from="1667119354273" duration="2845000" />
+      <workItem from="1667119354273" duration="3679000" />
+      <workItem from="1667125610094" duration="6133000" />
     </task>
     <task id="LOCAL−00001" summary="init commit">
       <created>1666822996329</created>

@@ -1,11 +1,24 @@
 import React from 'react';
 
 import { Box } from '@mui/material';
+import Button from '@mui/material/Button';
+import post from '@/services/fetch/post';
 
 const HomePage: React.FC = () => {
-  console.log('HomePage');
+  const clickHandler = async () => {
+    try {
+      const res = await post('auth', { ok: 'ok' });
+      console.dir(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  return <Box>HomePage</Box>;
+  return (
+    <Box>
+      <Button onClick={clickHandler}>click</Button>
+    </Box>
+  );
 };
 
 export default HomePage;

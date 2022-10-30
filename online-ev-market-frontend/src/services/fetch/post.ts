@@ -7,6 +7,7 @@ const post = async (endpoint: string, data: object) => {
   return axios({
     url: `${process.env.REACT_APP_SERVER_ADDRESS}${endpoint}`,
     method: 'POST',
+    withCredentials: true,
     headers: { 'x-access-token': token },
     data,
   });

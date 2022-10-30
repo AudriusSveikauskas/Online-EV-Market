@@ -28,6 +28,7 @@ const signUpController = async (req: Request, res: Response) => {
     );
     newUser.accessToken = accessToken;
     await newUser.save();
+
     res.status(200).send(
       responseMessage(
         200,

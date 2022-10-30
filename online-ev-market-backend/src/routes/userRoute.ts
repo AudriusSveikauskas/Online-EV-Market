@@ -7,6 +7,7 @@ import passwordFormatValidator from '../middleware/passwordFormatValidator';
 import nameValidator from '../middleware/nameValidator';
 import passwordValidator from '../middleware/passwordValidator';
 import userValidator from '../middleware/userValidator';
+import authorizationController from '../controllers/user/authorizationController';
 
 const userRoute = express.Router();
 
@@ -20,5 +21,7 @@ userRoute.post(
 );
 
 userRoute.post('/sign-in', userValidator, passwordValidator, signInController);
+
+userRoute.post('/auth', authorizationController);
 
 export default userRoute;
