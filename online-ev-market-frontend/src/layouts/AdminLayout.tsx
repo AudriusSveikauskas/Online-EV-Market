@@ -9,8 +9,6 @@ const AdminLayout: React.FC = () => {
   useEffect(() => {
     isAuthenticated('admin').then((res) => {
       if (res !== true) {
-        console.dir(res);
-
         navigate(`/sign-in?response=${JSON.stringify(res)}`);
       }
     });

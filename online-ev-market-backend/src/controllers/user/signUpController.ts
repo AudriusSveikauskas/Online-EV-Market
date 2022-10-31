@@ -23,13 +23,13 @@ const signUpController = async (req: Request, res: Response) => {
       },
       secret as Secret,
       {
-        expiresIn: 60,
+        expiresIn: '1h',
       },
     );
     newUser.accessToken = accessToken;
     await newUser.save();
 
-    res.status(200).send(
+    return res.status(200).send(
       responseMessage(
         200,
         'Thank you for signing up! Now you can sign into your account.',
@@ -42,7 +42,11 @@ const signUpController = async (req: Request, res: Response) => {
       ),
     );
   } catch (error) {
-    res.status(400).send(responseMessage(400, '-----------'));
+    return res
+      .status(500)
+      .send(
+        responseMessage(500, `${error}. Please contact site administrator.`),
+      );
   }
 };
 

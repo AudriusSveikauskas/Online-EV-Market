@@ -7,6 +7,7 @@ import SignUpPage from '@/pages/SignUpPage';
 import SignInPage from '@/pages/SignInPage';
 import AdminLayout from '@/layouts/AdminLayout';
 import AdminPage from '@/pages/AdminPage';
+import AdminSettings from '@/pages/AdminSettings';
 
 const theme = createTheme({
   breakpoints: {
@@ -32,6 +33,7 @@ const App = () => (
         <Route path="/sign-in" element={<SignInPage />} />
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<AdminPage />} />
+          <Route path="/admin/settings" element={<AdminSettings />} />
         </Route>
       </Routes>
     </BrowserRouter>

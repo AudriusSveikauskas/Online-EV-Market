@@ -60,7 +60,29 @@
           "tsx": "never"
         }
       ],
-      "object-curly-newline": ["error", { "consistent": true }]
+      "object-curly-newline": ["error", { "consistent": true }],
+      "no-underscore-dangle": [
+        2,
+        {
+          "allow": [
+            "_id"
+          ]
+        }
+      ],
+      "react/require-default-props": "off",
+      "react/jsx-wrap-multilines": [
+        2,
+        {
+          "declaration": false,
+          "assignment": false
+        }
+      ],
+      "no-param-reassign": [
+        2,
+        {
+          "props": false
+        }
+      ]
     },
     "settings": {
       "import/extensions": [

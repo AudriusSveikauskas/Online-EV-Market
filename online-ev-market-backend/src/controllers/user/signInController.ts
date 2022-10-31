@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import jwt, { Secret } from 'jsonwebtoken';
 import UserModel from '../../models/userModel';
+import responseMessage from '../../helpers/responseMessage';
 
 const signInController = async (req: Request, res: Response) => {
   const { user } = req.body;
@@ -13,7 +14,7 @@ const signInController = async (req: Request, res: Response) => {
       },
       secret as Secret,
       {
-        expiresIn: 60,
+        expiresIn: '1h',
       },
     );
 
@@ -34,7 +35,11 @@ const signInController = async (req: Request, res: Response) => {
       accessToken,
     });
   } catch (error) {
-    console.warn(error);
+    return res
+      .status(500)
+      .send(
+        responseMessage(500, `${error}. Please contact site administrator.`),
+      );
   }
 };
 
