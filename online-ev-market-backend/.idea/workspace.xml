@@ -3,44 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="006c7d5d-26e2-4007-ada7-678985b8819c" name="Changes" comment="init commit">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/filter/brand/addBrandController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/filter/brand/deleteBrandController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/filter/brand/getBrandsController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/filter/model/addModelController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/filter/model/deleteModelController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/filter/model/modelsController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/brand/brandDuplicateValidator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/brand/brandValidator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/BrandModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/ModelModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/filterRouter.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/admin/AddNewSettings.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/admin/MakeSettings.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/Buttons/AddNewSettingsButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/Container.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/FilterSettingsBox.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/TextFields/BasicTextField.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/TextFields/MultipleSelect.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/TextFields/SelectTextField.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/MakeFilter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/AdminSettings.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/store/api/brands.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/store/api/models.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/store/search/search.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/types/brand.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/types/select-text-field.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/user/signInController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user/signInController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/user/signUpController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user/signUpController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/layouts/AdminLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/layouts/AdminLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/fetch/get.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/fetch/get.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/fetch/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/fetch/post.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/store/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/admin/AddNewSettings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/admin/AddNewSettings.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +93,7 @@
       <workItem from="1667203112472" duration="2335000" />
       <workItem from="1667213412818" duration="5052000" />
       <workItem from="1667222001664" duration="7157000" />
-      <workItem from="1667240263009" duration="2106000" />
+      <workItem from="1667240263009" duration="3068000" />
     </task>
     <task id="LOCAL−00001" summary="init commit">
       <created>1666822996329</created>

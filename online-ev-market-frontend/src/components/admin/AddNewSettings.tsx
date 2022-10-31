@@ -39,8 +39,6 @@ const AddNewSettings: React.FC<AddNewSettingsProps> = ({
   const onClickHandler = async () => {
     const options = { _id, name: inputValue };
 
-    console.log('options', options);
-
     try {
       const res = await post(endpoint, options);
       setDialogMsg({
@@ -49,7 +47,9 @@ const AddNewSettings: React.FC<AddNewSettingsProps> = ({
         status: res.status as number,
       });
 
-      action && action(true);
+      if (action) {
+        action(true);
+      }
 
       setInputValue('');
     } catch (error) {
