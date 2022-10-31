@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
-import UserModel from '../models/userModel';
-import responseMessage from '../helpers/responseMessage';
+import UserModel from '../../models/userModel';
+import responseMessage from '../../helpers/responseMessage';
 
 const userValidator = async (
   req: Request,

@@ -4,6 +4,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import Container from '@/components/basics/Container';
 import MakeSettings from '@/components/admin/MakeSettings';
+import ModelSettings from '@/components/admin/ModelSettings';
 
 interface TabPanelProps {
   children: React.ReactNode;
@@ -60,7 +61,7 @@ const AdminSettings = () => {
           <MakeSettings />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          dsda
+          <ModelSettings />
         </TabPanel>
         <TabPanel value={value} index={2}>
           Item Three

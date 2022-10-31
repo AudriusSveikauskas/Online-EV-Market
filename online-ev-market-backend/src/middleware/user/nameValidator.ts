@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
-import normalizeName from '../helpers/normalizeName';
-import responseMessage from '../helpers/responseMessage';
+import normalizeName from '../../helpers/normalizeName';
+import responseMessage from '../../helpers/responseMessage';
 
 const nameValidator = (req: Request, res: Response, next: NextFunction) => {
   const { firstName, lastName } = req.body;

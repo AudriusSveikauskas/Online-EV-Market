@@ -43,7 +43,7 @@ const searchSlice = createSlice({
       state.makeId = action.payload;
     },
 
-    setBrandId(state, action) {
+    setModelId(state, action) {
       state.modelId = action.payload;
     },
 

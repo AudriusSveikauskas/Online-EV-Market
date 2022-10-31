@@ -12,18 +12,22 @@ const addModelController = async (req: Request, res: Response) => {
     });
 
     await newModel.save();
-  } catch (e) {
-    console.log(e);
-  }
 
-  res
-    .status(200)
-    .send(
-      responseMessage(
-        200,
-        `Model ${name} has been successfully added to the database.`,
-      ),
-    );
+    return res
+      .status(200)
+      .send(
+        responseMessage(
+          200,
+          `Model ${name.trim()} has been successfully added to the database.`,
+        ),
+      );
+  } catch (error) {
+    return res
+      .status(500)
+      .send(
+        responseMessage(500, `${error}. Please contact site administrator.`),
+      );
+  }
 };
 
 export default addModelController;

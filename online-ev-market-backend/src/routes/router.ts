@@ -1,10 +1,12 @@
 import express from 'express';
 import userRoute from './userRoute';
-import filterRouter from './filterRouter';
+import brandRoute from './brandRoute';
+import modelRoute from './modelRoute';
 
 const router = express.Router();
 
 router.use(userRoute);
-router.use(filterRouter);
+router.use(brandRoute);
+router.use(modelRoute);
 
 export default router;

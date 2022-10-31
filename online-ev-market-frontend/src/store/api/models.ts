@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialModels = {
   models: [],
+  reload: false,
 };
 
 const modelsSlice = createSlice({
@@ -10,6 +11,10 @@ const modelsSlice = createSlice({
   reducers: {
     setModels(state, action) {
       state.models = action.payload;
+    },
+
+    setReload(state, action) {
+      state.reload = action.payload;
     },
   },
 });

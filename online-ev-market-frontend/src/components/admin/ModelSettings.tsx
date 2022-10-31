@@ -13,8 +13,9 @@ import { searchActions } from '@/store/search/search';
 import get from '@/services/fetch/get';
 import AlertMsg from '@/helpers/AlertMsg';
 import { brandsActions } from '@/store/api/brands';
+import ModelFilter from '@/components/filters/BasicData/ModelFilter';
 
-const MakeSettings: React.FC = () => {
+const ModelSettings: React.FC = () => {
   const dispatch = useDispatch();
 
   const [isDisabled, setIsDisabled] = useState(true);
@@ -25,22 +26,24 @@ const MakeSettings: React.FC = () => {
     status: -1,
   });
 
-  const brandId = useSelector<RootState, string>(
-    (state) => state.search.makeId,
+  const modelId = useSelector<RootState, string>(
+    (state) => state.search.modelId,
   );
 
-  const setBrandId = (id: string) => {
-    dispatch(searchActions.setMakeId(id));
+  const makeId = useSelector<RootState, string>((state) => state.search.makeId);
+
+  const setModelId = (id: string) => {
+    dispatch(searchActions.setModelId(id));
   };
 
   const setReload = (reload: boolean) => {
     dispatch(brandsActions.setReload(reload));
   };
 
-  const deleteBrandHandler = async () => {
+  const deleteModelHandler = async () => {
     try {
-      const res = await get('brands/delete', brandId);
-      setBrandId('-1');
+      const res = await get('models/delete', modelId);
+      setModelId('-1');
       setDialogMsg({
         title: res.data.title,
         contentText: res.data.message,
@@ -72,12 +75,12 @@ const MakeSettings: React.FC = () => {
   };
 
   useEffect(() => {
-    if (brandId === '-1') {
+    if (modelId === '-1') {
       setIsDisabled(true);
     } else {
       setIsDisabled(false);
     }
-  }, [brandId]);
+  }, [modelId]);
 
   return (
     <Box
@@ -87,19 +90,24 @@ const MakeSettings: React.FC = () => {
         gap: 2,
       }}
     >
-      <AddNewSettings
-        id="brand"
-        label="Make"
-        endpoint="brands"
-        _id={brandId}
-        action={setReload}
-      />
-      <Divider orientation="vertical" flexItem />
       <FilterSettingsBox>
         <MakeFilter placeholder="Any" />
+      </FilterSettingsBox>
+
+      <Divider orientation="vertical" flexItem />
+
+      <AddNewSettings
+        id="model"
+        label="Model"
+        endpoint="models"
+        _id={makeId}
+        action={setReload}
+      />
+      <FilterSettingsBox>
+        <ModelFilter placeholder="Any" />
         <Button
           disabled={isDisabled}
-          onClick={deleteBrandHandler}
+          onClick={deleteModelHandler}
           color="error"
           size="large"
           variant="contained"
@@ -108,6 +116,7 @@ const MakeSettings: React.FC = () => {
           Delete
         </Button>
       </FilterSettingsBox>
+
       <AlertMsg
         msg={dialogMsg}
         open={dialogOpen}
@@ -117,4 +126,4 @@ const MakeSettings: React.FC = () => {
   );
 };
 
-export default MakeSettings;
+export default ModelSettings;

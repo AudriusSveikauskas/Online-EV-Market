@@ -17,7 +17,7 @@ const addBrandController = async (req: Request, res: Response) => {
       .send(
         responseMessage(
           200,
-          `Brand ${name} has been successfully added to the database.`,
+          `Brand ${name.trim()} has been successfully added to the database.`,
           brands,
         ),
       );
