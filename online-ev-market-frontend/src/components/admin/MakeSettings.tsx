@@ -5,7 +5,7 @@ import { Box, Button, Divider } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-import MakeFilter from '@/components/filters/BasicData/MakeFilter';
+import MakeFilter from '@/components/filters/BasicData/Make/MakeFilter';
 import FilterSettingsBox from '@/components/basics/FilterSettingsBox';
 import AddNewSettings from '@/components/admin/AddNewSettings';
 import { RootState } from '@/store/store';

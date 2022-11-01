@@ -8,6 +8,9 @@ import SignInPage from '@/pages/SignInPage';
 import AdminLayout from '@/layouts/AdminLayout';
 import AdminPage from '@/pages/AdminPage';
 import AdminSettings from '@/pages/AdminSettings';
+import AdsListing from '@/pages/AdsListing';
+import AdvancedSearch from '@/pages/AdvancedSearch';
+import Favorites from '@/pages/Favorites';
 
 const theme = createTheme({
   breakpoints: {
@@ -28,6 +31,10 @@ const App = () => (
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
+          <Route path="/cars" element={<AdsListing />} />
+          <Route path="/advanced-search" element={<AdvancedSearch />} />
+          <Route path="/sell" element={<AdvancedSearch />} />
+          <Route path="/favorites" element={<Favorites />} />
         </Route>
         <Route path="/sign-up" element={<SignUpPage />} />
         <Route path="/sign-in" element={<SignInPage />} />

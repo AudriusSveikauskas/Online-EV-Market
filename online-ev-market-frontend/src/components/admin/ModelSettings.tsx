@@ -5,7 +5,7 @@ import { Box, Button, Divider } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-import MakeFilter from '@/components/filters/BasicData/MakeFilter';
+import MakeFilter from '@/components/filters/BasicData/Make/MakeFilter';
 import FilterSettingsBox from '@/components/basics/FilterSettingsBox';
 import AddNewSettings from '@/components/admin/AddNewSettings';
 import { RootState } from '@/store/store';
@@ -13,7 +13,7 @@ import { searchActions } from '@/store/search/search';
 import get from '@/services/fetch/get';
 import AlertMsg from '@/helpers/AlertMsg';
 import { brandsActions } from '@/store/api/brands';
-import ModelFilter from '@/components/filters/BasicData/ModelFilter';
+import ModelFilter from '@/components/filters/BasicData/Model/ModelFilter';
 
 const ModelSettings: React.FC = () => {
   const dispatch = useDispatch();
