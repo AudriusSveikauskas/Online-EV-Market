@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from 'react';
-
-import { Box, Button, Divider } from '@mui/material';
-
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
+import { Box, Button, Divider } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-import MakeFilter from '@/components/filters/BasicData/Make/MakeFilter';
-import FilterSettingsBox from '@/components/basics/FilterSettingsBox';
-import AddNewSettings from '@/components/admin/AddNewSettings';
 import { RootState } from '@/store/store';
 import { searchActions } from '@/store/search/search';
+import { equipmentActions } from '@/store/api/equipment';
 import get from '@/services/fetch/get';
+import AddNewSettings from '@/components/admin/AddNewSettings';
+import FilterSettingsBox from '@/components/basics/FilterSettingsBox';
 import AlertMsg from '@/helpers/AlertMsg';
-import { brandsActions } from '@/store/api/brands';
+import EquipmentSelect from '@/components/filters/Equipment/EquipmentSelect';
 
-const MakeSettings: React.FC = () => {
+const EquipmentSettings: React.FC = () => {
   const dispatch = useDispatch();
 
   const [isDisabled, setIsDisabled] = useState(true);
@@ -25,22 +23,22 @@ const MakeSettings: React.FC = () => {
     status: -1,
   });
 
-  const brandId = useSelector<RootState, string>(
-    (state) => state.search.makeId,
+  const equipmentId = useSelector<RootState, string>(
+    (state) => state.search.equipmentId,
   );
 
-  const setBrandId = (id: string) => {
-    dispatch(searchActions.setMakeId(id));
+  const setEquipmentId = (id: string) => {
+    dispatch(searchActions.setEquipmentId(id));
   };
 
   const setReload = (reload: boolean) => {
-    dispatch(brandsActions.setReload(reload));
+    dispatch(equipmentActions.setReload(reload));
   };
 
-  const deleteBrandHandler = async () => {
+  const deleteEquipmentHandler = async () => {
     try {
-      const res = await get('brands/delete', brandId);
-      setBrandId('-1');
+      const res = await get('equipment/delete', equipmentId);
+      setEquipmentId('-1');
       setDialogMsg({
         title: res.data.title,
         contentText: res.data.message,
@@ -72,12 +70,12 @@ const MakeSettings: React.FC = () => {
   };
 
   useEffect(() => {
-    if (brandId === '-1') {
+    if (equipmentId === '-1') {
       setIsDisabled(true);
     } else {
       setIsDisabled(false);
     }
-  }, [brandId]);
+  }, [equipmentId]);
 
   return (
     <Box
@@ -88,18 +86,17 @@ const MakeSettings: React.FC = () => {
       }}
     >
       <AddNewSettings
-        id="brand"
-        label="Make"
-        endpoint="brands"
-        _id={brandId}
+        id="equipment"
+        label="Equipment"
+        endpoint="equipment"
         action={setReload}
       />
       <Divider orientation="vertical" flexItem />
       <FilterSettingsBox>
-        <MakeFilter placeholder="Any" />
+        <EquipmentSelect placeholder="Any" />
         <Button
           disabled={isDisabled}
-          onClick={deleteBrandHandler}
+          onClick={deleteEquipmentHandler}
           color="error"
           size="large"
           variant="contained"
@@ -117,4 +114,4 @@ const MakeSettings: React.FC = () => {
   );
 };
 
-export default MakeSettings;
+export default EquipmentSettings;

@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import jwt, { Secret } from 'jsonwebtoken';
-import UserModel from '../../models/userModel';
+import UserModel from '../../models/UserModel';
 import responseMessage from '../../helpers/responseMessage';
 
 const signInController = async (req: Request, res: Response) => {

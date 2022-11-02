@@ -5,6 +5,7 @@ const initialSearchState = {
   technicalDataExpanded: true,
   exteriorExpanded: true,
   interiorExpanded: true,
+  equipmentExpanded: true,
   makeId: '-1',
   modelId: '-1',
   firstRegistrationFromYear: '-1',
@@ -17,6 +18,7 @@ const initialSearchState = {
   batteryCapacityToKWH: '-1',
   powerFromHP: '-1',
   powerToHP: '-1',
+  equipmentId: '-1',
 };
 
 const searchSlice = createSlice({
@@ -37,6 +39,10 @@ const searchSlice = createSlice({
 
     setInteriorExpanded(state) {
       state.interiorExpanded = !state.interiorExpanded;
+    },
+
+    setEquipmentExpanded(state) {
+      state.equipmentExpanded = !state.equipmentExpanded;
     },
 
     setMakeId(state, action) {
@@ -85,6 +91,10 @@ const searchSlice = createSlice({
 
     setPowerToHP(state, action) {
       state.powerToHP = action.payload;
+    },
+
+    setEquipmentId(state, action) {
+      state.equipmentId = action.payload;
     },
   },
 });

@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Container from '@/components/basics/Container';
 import MakeSettings from '@/components/admin/MakeSettings';
 import ModelSettings from '@/components/admin/ModelSettings';
+import EquipmentSettings from '@/components/admin/EquipmentSettings';
 
 interface TabPanelProps {
   children: React.ReactNode;
@@ -64,16 +65,16 @@ const AdminSettings = () => {
           <ModelSettings />
         </TabPanel>
         <TabPanel value={value} index={2}>
-          Item Three
+          First registration
         </TabPanel>
         <TabPanel value={value} index={3}>
-          Item One
+          Price
         </TabPanel>
         <TabPanel value={value} index={4}>
-          Item Two
+          Mileage
         </TabPanel>
         <TabPanel value={value} index={5}>
-          Item Three
+          <EquipmentSettings />
         </TabPanel>
         <TabPanel value={value} index={6}>
           Item One

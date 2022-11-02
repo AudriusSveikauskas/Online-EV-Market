@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import jwt, { Secret } from 'jsonwebtoken';
 import responseMessage from '../../helpers/responseMessage';
 import hashPassword from '../../helpers/auth/hashPassword';
-import UserModel from '../../models/userModel';
+import UserModel from '../../models/UserModel';
 
 const signUpController = async (req: Request, res: Response) => {
   const { firstName, lastName, email, password } = req.body;

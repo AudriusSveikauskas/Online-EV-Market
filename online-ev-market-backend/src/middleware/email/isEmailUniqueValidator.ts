@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import userModel from '../../models/userModel';
+import userModel from '../../models/UserModel';
 import responseMessage from '../../helpers/responseMessage';
 
 const isEmailUniqueValidator = async (
