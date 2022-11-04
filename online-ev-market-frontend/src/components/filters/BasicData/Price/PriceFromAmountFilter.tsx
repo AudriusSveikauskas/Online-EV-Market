@@ -1,9 +1,11 @@
 import * as React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
+import { SelectChangeEvent } from '@mui/material/Select';
 import { RootState } from '@/store/store';
 import { searchActions } from '@/store/search/search';
-import SelectTextField from '@/components/basics/TextFields/SelectTextField';
+import price from '@/static-data/price';
+import MultipleSelect from '@/components/basics/TextFields/MultipleSelect';
 
 const PriceFromAmountFilter: React.FC<SelectTextFieldProps> = ({
   label,
@@ -17,28 +19,21 @@ const PriceFromAmountFilter: React.FC<SelectTextFieldProps> = ({
     (state) => state.search.priceFromAmount,
   );
 
-  const priceFromAmountChangeHandler = (
-    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
-  ) => {
+  const priceFromAmountChangeHandler = (e: SelectChangeEvent) => {
     dispatch(searchActions.setPriceFromAmount(e.target.value));
   };
 
   return (
-    <SelectTextField
+    <MultipleSelect
       id="search-price-from-field"
-      name="priceFrom"
+      name="Price"
       label={label}
       value={priceFromAmount}
       placeholder={placeholder}
       startAdornment={startAdornment}
       endAdornment={endAdornment}
       onChange={priceFromAmountChangeHandler}
-      // TODO static-data from server
-      options={[
-        { _id: '5000', name: '5,000' },
-        { _id: '7500', name: '7,500' },
-        { _id: '10000', name: '10,000' },
-      ]}
+      options={price}
     />
   );
 };

@@ -1,14 +1,28 @@
-import React from 'react';
-import { Box } from '@mui/material';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Grid from '@mui/material/Unstable_Grid2';
 import CheckboxElement from '@/components/basics/CheckboxElements/CheckboxElement';
 import AccordionElement from '@/components/basics/AccordionElements/AccordionElement';
 import { RootState } from '@/store/store';
 import { searchActions } from '@/store/search/search';
+import { equipmentActions } from '@/store/api/equipment';
+import get from '@/services/fetch/get';
+import { Options } from '@/components/basics/TextFields/SelectTextField';
 
 const Equipment: React.FC = () => {
   const dispatch = useDispatch();
+
+  const setEquipment = (arr: EquipmentProps[]) => {
+    dispatch(equipmentActions.setEquipment(arr));
+  };
+
+  const equipmentArr = useSelector<RootState, Options[]>(
+    (state) => state.equipment.equipment,
+  );
+
+  const setOptionalEquipment = (id: string) => {
+    dispatch(searchActions.setOptionalEquipment(id));
+  };
 
   const expanded = useSelector<RootState, boolean>(
     (state) => state.search.equipmentExpanded,
@@ -19,23 +33,19 @@ const Equipment: React.FC = () => {
   };
 
   const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.name);
+    const newValue = event.target.name;
+
+    setOptionalEquipment(newValue);
   };
 
-  const checkboxArr = [
-    { id: '1', name: 'aaa' },
-    { id: '2', name: 'bbb' },
-    { id: '3', name: 'ccc' },
-    { id: '4', name: 'ddd' },
-    { id: '5', name: 'aaa' },
-    { id: '6', name: 'bbb' },
-    { id: '7', name: 'ccc' },
-    { id: '8', name: 'ddd' },
-    { id: '9', name: 'aaa' },
-    { id: '10', name: 'bbb' },
-    { id: '11', name: 'ccc' },
-    { id: '12', name: 'ddd' },
-  ];
+  const fetchData = async () => {
+    const fetchedData = await get('equipment');
+    setEquipment(fetchedData.data.equipment);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <AccordionElement
@@ -44,37 +54,30 @@ const Equipment: React.FC = () => {
       expanded={expanded}
       onChange={exteriorChangeHandler}
     >
-      <Grid container spacing={{ xs: 2, md: 3 }}>
-        <Grid
-          xs={12}
-          md={12}
-          sx={{
-            display: 'flex',
-            flexWrap: 'wrap',
-          }}
-        >
-          {checkboxArr.map((el) => (
-            <Box
-              key={el.id}
-              sx={{
-                minWidth: {
-                  xs: 'calc((100% - 23px) / 2)',
-                  sm: 'calc((100% - 34px) / 3)',
-                  md: 'calc((100% - 56px) / 5)',
-                  lg: 'calc((100% - 79px) / 7)',
-                },
-                height: 60,
-                ml: 1.4,
-              }}
-            >
-              <CheckboxElement
-                id={el.id}
-                label={el.name}
-                onChange={onChangeHandler}
-              />
-            </Box>
-          ))}
-        </Grid>
+      <Grid container>
+        {equipmentArr.map((el) => (
+          <Grid
+            width={{
+              xs: 'calc((100% / 2) - 12px)',
+              md: 'calc((100% / 3) - 12px)',
+              lg: 'calc((100% / 4) - 12px)',
+            }}
+            key={el._id}
+            sx={{
+              overflow: 'hidden',
+              display: 'flex',
+              flexWrap: 'wrap',
+              height: 60,
+              ml: 1.4,
+            }}
+          >
+            <CheckboxElement
+              id={el._id}
+              label={el.name}
+              onChange={onChangeHandler}
+            />
+          </Grid>
+        ))}
       </Grid>
     </AccordionElement>
   );

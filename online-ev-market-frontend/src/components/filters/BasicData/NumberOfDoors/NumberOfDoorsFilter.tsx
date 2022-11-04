@@ -5,9 +5,18 @@ import {
   ToggleButtonGroup,
   Typography,
 } from '@mui/material';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { searchActions } from '@/store/search/search';
 
 const NumberOfDoorsFilter: React.FC = () => {
-  const [doors, setDoors] = React.useState<string | null>('left');
+  const dispatch = useDispatch();
+
+  const [doors, setDoors] = React.useState<string | null>('-1');
+
+  const setNumberOfDoors = (id: string) => {
+    dispatch(searchActions.setNumberOfDoors(id));
+  };
 
   const handleAlignment = (
     event: React.MouseEvent<HTMLElement>,
@@ -15,6 +24,10 @@ const NumberOfDoorsFilter: React.FC = () => {
   ) => {
     setDoors(newAlignment);
   };
+
+  useEffect(() => {
+    if (doors) setNumberOfDoors(doors);
+  }, [doors]);
 
   return (
     <Box
@@ -33,28 +46,20 @@ const NumberOfDoorsFilter: React.FC = () => {
         value={doors}
         exclusive
         onChange={handleAlignment}
-        aria-label="text alignment"
+        aria-label="number of doors"
         sx={{
           flexGrow: 1,
           display: 'flex',
           height: '32px',
         }}
       >
-        <ToggleButton
-          value="left"
-          aria-label="left aligned"
-          sx={{ flexGrow: 1 }}
-        >
+        <ToggleButton value="-1" aria-label="all" sx={{ flexGrow: 1 }}>
           All
         </ToggleButton>
-        <ToggleButton value="center" aria-label="centered" sx={{ flexGrow: 1 }}>
+        <ToggleButton value="3" aria-label="2 or 3" sx={{ flexGrow: 1 }}>
           2/3
         </ToggleButton>
-        <ToggleButton
-          value="right"
-          aria-label="right aligned"
-          sx={{ flexGrow: 1 }}
-        >
+        <ToggleButton value="5" aria-label="4 or 5" sx={{ flexGrow: 1 }}>
           4/5
         </ToggleButton>
       </ToggleButtonGroup>

@@ -82,7 +82,12 @@
         {
           "props": false
         }
-      ]
+      ],
+      "react/jsx-props-no-spreading": [0, {
+        "html": "ignore",
+        "custom": "ignore",
+        "explicitSpread": "ignore"
+      }]
     },
     "settings": {
       "import/extensions": [

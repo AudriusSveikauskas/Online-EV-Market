@@ -1,9 +1,11 @@
 import * as React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
+import { SelectChangeEvent } from '@mui/material/Select';
 import { RootState } from '@/store/store';
 import { searchActions } from '@/store/search/search';
-import SelectTextField from '@/components/basics/TextFields/SelectTextField';
+import firstRegistration from '@/static-data/firstRegistration';
+import MultipleSelect from '@/components/basics/TextFields/MultipleSelect';
 
 const FirstRegistrationFromFilter: React.FC<SelectTextFieldProps> = ({
   label,
@@ -17,16 +19,14 @@ const FirstRegistrationFromFilter: React.FC<SelectTextFieldProps> = ({
     (state) => state.search.firstRegistrationFromYear,
   );
 
-  const firstRegistrationFromYearChangeHandler = (
-    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
-  ) => {
+  const firstRegistrationFromYearChangeHandler = (e: SelectChangeEvent) => {
     dispatch(searchActions.setFirstRegistrationFromYear(e.target.value));
   };
 
   return (
-    <SelectTextField
+    <MultipleSelect
       id="search-first-registration-field"
-      name="firstRegistrationFrom"
+      name="First Registration"
       label={label}
       value={firstRegistrationFromYear}
       placeholder={placeholder}
@@ -34,11 +34,7 @@ const FirstRegistrationFromFilter: React.FC<SelectTextFieldProps> = ({
       endAdornment={endAdornment}
       onChange={firstRegistrationFromYearChangeHandler}
       // TODO static-data from server
-      options={[
-        { _id: '2022', name: '2022' },
-        { _id: '2021', name: '2021' },
-        { _id: '2020', name: '2020' },
-      ]}
+      options={firstRegistration}
     />
   );
 };

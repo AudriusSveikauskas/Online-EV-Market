@@ -16,6 +16,7 @@ type ColorCheckboxElementProps = {
   name: string;
   label: string;
   backgroundColor: string;
+  colorSelectHandler: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 const ColorCheckboxElement: React.FC<ColorCheckboxElementProps> = ({
@@ -23,11 +24,13 @@ const ColorCheckboxElement: React.FC<ColorCheckboxElementProps> = ({
   name,
   label,
   backgroundColor,
+  colorSelectHandler,
 }) => {
   const [checked, setChecked] = React.useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked);
+    colorSelectHandler(event);
   };
 
   const contrastColor = setContrastColor(backgroundColor);

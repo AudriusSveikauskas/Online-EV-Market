@@ -11,15 +11,11 @@ const CheckboxElement: React.FC<CheckboxElementProps> = ({
   id,
   label,
   onChange,
-}) => {
-  console.log('CheckboxElement');
-
-  return (
-    <FormControlLabel
-      control={<Checkbox onChange={onChange} name={id} />}
-      label={label}
-    />
-  );
-};
+}) => (
+  <FormControlLabel
+    control={<Checkbox onChange={onChange} name={id} />}
+    label={label}
+  />
+);
 
 export default CheckboxElement;

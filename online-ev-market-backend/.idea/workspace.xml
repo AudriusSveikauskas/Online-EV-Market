@@ -3,32 +3,35 @@
   <component name="ChangeListManager">
     <list default="true" id="006c7d5d-26e2-4007-ada7-678985b8819c" name="Changes" comment="init commit">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/filter/optional-equipment/addEquipmentController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/filter/optional-equipment/deleteEquipmentController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/filter/optional-equipment/getEquipmentController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/equipment/equipmentDuplicateValidator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/middleware/equipment/equipmentValidator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/EquipmentModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/equipmentRoute.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/admin/EquipmentSettings.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/CheckboxElements/CheckboxElement.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/Equipment/Equipment.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/Equipment/EquipmentSelect.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/store/api/equipment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/types/equipment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/TextFields/AutocompleteLimitTags.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/Interior/Upholstery.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/SearchButton/SearchButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/static-data/bodyType.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/static-data/firstRegistration.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/static-data/interiorColor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/static-data/price.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/static-data/upholstery.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/user/signInController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user/signInController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/user/signUpController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user/signUpController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/email/isEmailUniqueValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/email/isEmailUniqueValidator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/user/userValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/user/userValidator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/userModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/UserModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/admin/MakeSettings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/admin/MakeSettings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/filter/optional-equipment/deleteEquipmentController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/filter/optional-equipment/deleteEquipmentController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/AccordionElements/AccordionElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/AccordionElements/AccordionElement.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/CheckboxElements/CheckboxElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/CheckboxElements/CheckboxElement.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/CheckboxElements/ColorCheckboxElement.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/CheckboxElements/ColorCheckboxElement.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/BodyType/BodyTypeFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/BodyType/BodyTypeFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/FirstRegistration/FirstRegistrationFromFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/FirstRegistration/FirstRegistrationFromFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/FirstRegistration/FirstRegistrationToFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/FirstRegistration/FirstRegistrationToFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/Mileage/MileageFromKmFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/Mileage/MileageFromKmFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/Mileage/MileageUpToKmFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/Mileage/MileageUpToKmFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/NumberOfDoors/NumberOfDoorsFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/NumberOfDoors/NumberOfDoorsFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/NumberOfSeats/NumberOfSeatsFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/NumberOfSeats/NumberOfSeatsFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/Price/PriceFromAmountFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/Price/PriceFromAmountFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/Price/PriceUpToAmountFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/BasicData/Price/PriceUpToAmountFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/Equipment/Equipment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/Equipment/Equipment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/Exterior/Exterior.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/Exterior/Exterior.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/Filters.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/AdminSettings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/AdminSettings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/Interior/Interior.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/Interior/Interior.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/store/search/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/store/search/search.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/store/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +123,11 @@
       <workItem from="1667248593818" duration="6376000" />
       <workItem from="1667258374978" duration="730000" />
       <workItem from="1667291177793" duration="1743000" />
-      <workItem from="1667383978982" duration="9754000" />
+      <workItem from="1667383978982" duration="10512000" />
+      <workItem from="1667458341641" duration="14000" />
+      <workItem from="1667460199116" duration="83000" />
+      <workItem from="1667460361688" duration="1947000" />
+      <workItem from="1667547538890" duration="595000" />
     </task>
     <task id="LOCAL−00001" summary="init commit">
       <created>1666822996329</created>

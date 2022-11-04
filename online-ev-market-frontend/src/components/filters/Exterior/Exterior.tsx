@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import Grid from '@mui/material/Unstable_Grid2';
 
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { RootState } from '@/store/store';
 import { searchActions } from '@/store/search/search';
 import AccordionElement from '@/components/basics/AccordionElements/AccordionElement';
@@ -18,17 +18,37 @@ const Exterior: React.FC = () => {
     (state) => state.search.exteriorExpanded,
   );
 
+  const setExteriorColor = (id: string) => {
+    dispatch(searchActions.setExteriorColor(id));
+  };
+
   const exteriorChangeHandler = () => {
     dispatch(searchActions.setExteriorExpanded());
+  };
+
+  const colorSelectHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setExteriorColor(event.target.id);
   };
 
   return (
     <AccordionElement
       id="exterior-data"
-      title="Exterior Data"
+      title="Exterior"
       expanded={expanded}
       onChange={exteriorChangeHandler}
     >
+      <Typography
+        sx={{
+          fontSize: '12px',
+          fontWeight: '400',
+          lineHeight: '1.4375em',
+          letterSpacing: '0.00938em',
+          color: 'rgba(0, 0, 0, 0.6)',
+          mb: 2,
+        }}
+      >
+        Body color
+      </Typography>
       <Grid container spacing={{ xs: 2, md: 3 }}>
         <Grid
           xs={12}
@@ -56,6 +76,7 @@ const Exterior: React.FC = () => {
                 id={color.id}
                 name={color.name}
                 label={color.label}
+                colorSelectHandler={colorSelectHandler}
                 backgroundColor={color.backgroundColor}
               />
             </Box>

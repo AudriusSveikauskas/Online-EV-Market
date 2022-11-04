@@ -3,8 +3,6 @@ import EquipmentModel from '../../../models/EquipmentModel';
 import responseMessage from '../../../helpers/responseMessage';
 
 const deleteEquipmentController = async (req: Request, res: Response) => {
-  console.log('req.params - ', req.params);
-
   try {
     const { _id } = req.params;
     const { name } = req.body;

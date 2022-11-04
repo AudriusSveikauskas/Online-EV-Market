@@ -1,10 +1,11 @@
 import * as React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
+import { SelectChangeEvent } from '@mui/material/Select';
 import { RootState } from '@/store/store';
-import SelectTextField from '@/components/basics/TextFields/SelectTextField';
 import { searchActions } from '@/store/search/search';
 import createMileageOptions from '@/helpers/create-mileage-options';
+import MultipleSelect from '@/components/basics/TextFields/MultipleSelect';
 
 const MileageUpToKmFilter: React.FC<SelectTextFieldProps> = ({
   label,
@@ -18,16 +19,14 @@ const MileageUpToKmFilter: React.FC<SelectTextFieldProps> = ({
     (state) => state.search.mileageUpToKm,
   );
 
-  const mileageUpToKmChangeHandler = (
-    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
-  ) => {
+  const mileageUpToKmChangeHandler = (e: SelectChangeEvent) => {
     dispatch(searchActions.setMileageUpToKm(e.target.value));
   };
 
   return (
-    <SelectTextField
+    <MultipleSelect
       id="search-mileage-up-to-field"
-      name="mileageUpTo"
+      name=""
       label={label}
       value={mileageUpToKm}
       placeholder={placeholder}

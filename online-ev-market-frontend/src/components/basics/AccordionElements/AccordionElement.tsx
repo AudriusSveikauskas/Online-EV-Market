@@ -31,7 +31,9 @@ const AccordionElement: React.FC<AccordionElementProps> = ({
       aria-controls={id}
       id={id}
     >
-      <Typography>{title}</Typography>
+      <Typography letterSpacing={1} color="#1976d2">
+        {title}
+      </Typography>
     </AccordionSummary>
     <AccordionDetails>
       <Box>{children}</Box>

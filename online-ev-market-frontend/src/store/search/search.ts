@@ -14,10 +14,17 @@ const initialSearchState = {
   priceUpToAmount: '-1',
   mileageFromKm: '-1',
   mileageUpToKm: '-1',
+  numberOfDoors: '-1',
+  bodyType: ['-1'],
+  numberOfSeats: '-1',
   batteryCapacityFromKWH: '-1',
   batteryCapacityToKWH: '-1',
   powerFromHP: '-1',
   powerToHP: '-1',
+  optionalEquipment: [] as string[],
+  exteriorColor: [] as string[],
+  interiorColor: [] as string[],
+  upholstery: [] as string[],
   equipmentId: '-1',
 };
 
@@ -77,6 +84,18 @@ const searchSlice = createSlice({
       state.mileageUpToKm = action.payload;
     },
 
+    setNumberOfDoors(state, action) {
+      state.numberOfDoors = action.payload;
+    },
+
+    setBodyType(state, action) {
+      state.bodyType = action.payload;
+    },
+
+    setNumberOfSeats(state, action) {
+      state.numberOfSeats = action.payload;
+    },
+
     setBatteryCapacityFromKWH(state, action) {
       state.batteryCapacityFromKWH = action.payload;
     },
@@ -91,6 +110,52 @@ const searchSlice = createSlice({
 
     setPowerToHP(state, action) {
       state.powerToHP = action.payload;
+    },
+
+    setOptionalEquipment(state, action) {
+      const id: string = action.payload;
+      const index = state.optionalEquipment.indexOf(id);
+
+      if (index === -1) {
+        state.optionalEquipment.push(id);
+      } else {
+        state.optionalEquipment = state.optionalEquipment.filter(
+          (el) => el !== id,
+        );
+      }
+    },
+
+    setExteriorColor(state, action) {
+      const id: string = action.payload;
+      const index = state.exteriorColor.indexOf(id);
+
+      if (index === -1) {
+        state.exteriorColor.push(id);
+      } else {
+        state.exteriorColor = state.exteriorColor.filter((el) => el !== id);
+      }
+    },
+
+    setInteriorColor(state, action) {
+      const id: string = action.payload;
+      const index = state.interiorColor.indexOf(id);
+
+      if (index === -1) {
+        state.interiorColor.push(id);
+      } else {
+        state.interiorColor = state.interiorColor.filter((el) => el !== id);
+      }
+    },
+
+    setUpholstery(state, action) {
+      const id: string = action.payload;
+      const index = state.upholstery.indexOf(id);
+
+      if (index === -1) {
+        state.upholstery.push(id);
+      } else {
+        state.upholstery = state.upholstery.filter((el) => el !== id);
+      }
     },
 
     setEquipmentId(state, action) {
