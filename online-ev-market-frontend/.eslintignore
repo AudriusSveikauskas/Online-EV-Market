@@ -1,2 +1,3 @@
 craco.config.ts
 src/reportWebVitals.ts
+src/helpers/setContrastColor.ts

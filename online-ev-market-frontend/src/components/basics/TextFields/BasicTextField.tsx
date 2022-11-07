@@ -4,8 +4,8 @@ import { TextField } from '@mui/material';
 type BasicTextFieldProps = {
   id: string;
   label: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 const BasicTextField: React.FC<BasicTextFieldProps> = ({

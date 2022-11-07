@@ -9,8 +9,8 @@ import { Options } from '@/components/basics/TextFields/SelectTextField';
 
 type MultipleSelectProps = {
   id: string;
-  name: string;
-  onChange: (e: SelectChangeEvent) => void;
+  name?: string;
+  onChange?: (e: SelectChangeEvent) => void;
   label?: string;
   value?: string;
   placeholder?: string;

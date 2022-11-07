@@ -21,6 +21,8 @@
     "axios": "^1.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-image-gallery": "^1.2.11",
+    "react-multi-carousel": "^2.8.2",
     "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.2",
     "react-scripts": "^5.0.1",
@@ -42,7 +44,10 @@
       "project": "./tsconfig.json"
     },
     "rules": {
-      "implicit-arrow-linebreak": [0, "below"],
+      "implicit-arrow-linebreak": [
+        0,
+        "below"
+      ],
       "react/function-component-definition": [
         2,
         {
@@ -60,7 +65,12 @@
           "tsx": "never"
         }
       ],
-      "object-curly-newline": ["error", { "consistent": true }],
+      "object-curly-newline": [
+        "error",
+        {
+          "consistent": true
+        }
+      ],
       "no-underscore-dangle": [
         2,
         {
@@ -83,11 +93,14 @@
           "props": false
         }
       ],
-      "react/jsx-props-no-spreading": [0, {
-        "html": "ignore",
-        "custom": "ignore",
-        "explicitSpread": "ignore"
-      }]
+      "react/jsx-props-no-spreading": [
+        0,
+        {
+          "html": "ignore",
+          "custom": "ignore",
+          "explicitSpread": "ignore"
+        }
+      ]
     },
     "settings": {
       "import/extensions": [

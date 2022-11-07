@@ -47,6 +47,7 @@
       }
     ],
     "implicit-arrow-linebreak": [0, "below"],
+    "operator-linebreak": ["error", "after"],
     "no-underscore-dangle": ["error", { "allow": ["_id"] }]
   }
 }

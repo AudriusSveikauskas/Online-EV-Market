@@ -49,7 +49,7 @@ const SignInPage: React.FC = () => {
     try {
       const res = await post('sign-in', formData);
       if (res && res.data.payload.role === 'admin') {
-        navigate('/admin');
+        navigate('/admin/settings');
       } else {
         navigate('/');
       }

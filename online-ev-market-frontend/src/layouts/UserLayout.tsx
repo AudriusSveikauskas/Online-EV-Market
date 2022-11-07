@@ -1,23 +1,25 @@
-import { Box } from '@mui/material';
 import React, { useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
+import { Box } from '@mui/material';
 import isAuthenticated from '@/services/auth/isAuthenticated';
+import NavBar from '@/components/navigation/NavBar';
 
-const AdminLayout: React.FC = () => {
+const UserLayout: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    isAuthenticated('admin').then((res) => {
+    isAuthenticated('user').then((res) => {
       if (res !== true) {
         navigate(`/sign-in?response=${JSON.stringify(res)}`);
       }
     });
   }, []);
   return (
-    <Box sx={{ mt: 4 }}>
+    <Box maxWidth="lg" sx={{ marginX: 'auto' }}>
+      <NavBar />
       <Outlet />
     </Box>
   );
 };
 
-export default AdminLayout;
+export default UserLayout;
