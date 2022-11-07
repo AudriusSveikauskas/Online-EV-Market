@@ -58,7 +58,10 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <Box maxWidth="lg" sx={{ marginX: 'auto', backgroundColor: 'white' }}>
+    <Box
+      maxWidth="lg"
+      sx={{ marginX: 'auto', backgroundColor: 'white', mb: 4 }}
+    >
       <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
         <MobileSearch />
       </Box>

@@ -79,6 +79,7 @@ const AdsListing = () => {
         marginX: 'auto',
         gap: 2,
         mt: 2,
+        mb: 4,
       }}
     >
       {Array.from(carsArray).map((car) => (

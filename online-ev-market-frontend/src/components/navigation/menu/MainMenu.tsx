@@ -10,6 +10,7 @@ import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheck';
+import SearchIcon from '@mui/icons-material/Search';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
@@ -63,6 +64,9 @@ const MainMenu = () => {
       />
       <Tab icon={<MonetizationOnIcon />} label="Sell Your Car" value="/sell" />
       <Tab icon={<FavoriteIcon />} label="Saved Cars" value="/favorites" />
+      {page === '' && (
+        <Tab icon={<SearchIcon />} label="Search Results" value="" disabled />
+      )}
     </Tabs>
   );
 };

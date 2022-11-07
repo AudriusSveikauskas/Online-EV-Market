@@ -125,6 +125,13 @@ const searchSlice = createSlice({
       }
     },
 
+    resetAllStateArrays(state) {
+      state.optionalEquipment.length = 0;
+      state.exteriorColor.length = 0;
+      state.interiorColor.length = 0;
+      state.upholstery.length = 0;
+    },
+
     setExteriorColor(state, action) {
       const id: string = action.payload;
       const index = state.exteriorColor.indexOf(id);

@@ -3,16 +3,24 @@ import { Box, Button } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import MakeFilter from '@/components/filters/BasicData/Make/MakeFilter';
 import ModelFilter from '@/components/filters/BasicData/Model/ModelFilter';
 import FirstRegistrationFromFilter from '@/components/filters/BasicData/FirstRegistration/FirstRegistrationFromFilter';
 import PriceUpToAmountFilter from '@/components/filters/BasicData/Price/PriceUpToAmountFilter';
 import MileageUpToKmFilter from '@/components/filters/BasicData/Mileage/MileageUpToKmFilter';
+import { mainMenuActions } from '@/store/menu/main-menu';
 
 const Search: React.FC = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const setMenuPageState = () => {
+    dispatch(mainMenuActions.setPage('/advanced-search'));
+  };
+
   const clickHandle = () => {
+    setMenuPageState();
     navigate('advanced-search');
   };
 

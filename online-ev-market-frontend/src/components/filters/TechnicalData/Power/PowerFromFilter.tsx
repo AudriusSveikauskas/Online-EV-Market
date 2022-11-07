@@ -35,9 +35,15 @@ const PowerFromFilter: React.FC<SelectTextFieldProps> = ({
       onChange={powerFromHPChangeHandler}
       // TODO static-data from server
       options={[
+        { _id: '50', name: '50' },
+        { _id: '70', name: '70' },
         { _id: '100', name: '100' },
+        { _id: '150', name: '150' },
         { _id: '200', name: '200' },
-        { _id: '350', name: '350' },
+        { _id: '300', name: '300' },
+        { _id: '400', name: '400' },
+        { _id: '500', name: '500' },
+        { _id: '1000', name: '1000' },
       ]}
     />
   );

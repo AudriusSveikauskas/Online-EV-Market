@@ -5,6 +5,7 @@ import BrandModel from '../../models/BrandModel';
 
 const filterCarsController = async (req: Request, res: Response) => {
   const {
+    makeId,
     modelId,
     firstRegistrationFromYear,
     firstRegistrationToYear,
@@ -12,118 +13,330 @@ const filterCarsController = async (req: Request, res: Response) => {
     priceUpToAmount,
     mileageFromKm,
     mileageUpToKm,
-    // numberOfDoors,
-    // numberOfSeats,
     batteryCapacityFromKWH,
     batteryCapacityToKWH,
     powerFromHP,
     powerToHP,
-    // optionalEquipment,
-    // exteriorColor,
-    // interiorColor,
-    // upholstery,
+    numberOfDoors,
+    numberOfSeats,
+    optionalEquipment,
+    exteriorColor,
+    interiorColor,
+    upholstery,
   } = req.body;
 
-  const modelIdString = () => {
-    if (modelId === '-1') {
-      return null;
+  // model
+
+  const modelIdQuery = async () => {
+    if (modelId === '-1' && makeId === '-1') {
+      return {
+        $exists: true,
+      };
     }
-    return modelId;
+    if (modelId === '-1' && makeId !== '-1') {
+      const arr = await ModelModel.find({
+        brandId: makeId,
+      });
+      const modelArr: string[] = [];
+      arr.forEach((item) => {
+        const id = item._id.toString();
+        modelArr.push(id);
+      });
+      return {
+        $in: modelArr,
+      };
+    }
+    return {
+      $eq: modelId,
+    };
   };
 
-  const firstRegistrationFromYearNumber = () => {
+  // first registration
+
+  const firstRegistrationFromYearQuery = () => {
     if (firstRegistrationFromYear === '-1') {
-      return 0;
+      return {
+        $gte: 0,
+      };
     }
-    return Number(firstRegistrationFromYear);
+    return {
+      $gte: Number(firstRegistrationFromYear),
+    };
   };
 
-  const firstRegistrationToYearNumber = () => {
+  const firstRegistrationToYearQuery = () => {
     if (firstRegistrationToYear === '-1') {
-      return 9999;
+      return {
+        $lte: 9999,
+      };
     }
-    return Number(firstRegistrationToYear);
+    return {
+      $lte: Number(firstRegistrationToYear),
+    };
   };
 
-  const priceFromAmountNumber = () => {
+  // price
+
+  const priceFromAmountQuery = () => {
     if (priceFromAmount === '-1') {
-      return 0;
+      return {
+        $gte: 0,
+      };
     }
-    return Number(priceFromAmount);
+    return {
+      $gte: Number(priceFromAmount),
+    };
   };
 
-  const priceUpToAmountNumber = () => {
+  const priceUpToAmountQuery = () => {
     if (priceUpToAmount === '-1') {
-      return 999999999999999;
+      return {
+        $lte: 9999999,
+      };
     }
-    return Number(priceUpToAmount);
+    return {
+      $lte: Number(priceUpToAmount),
+    };
   };
 
-  const mileageFromKmNumber = () => {
+  // mileage
+
+  const mileageFromKmQuery = () => {
     if (mileageFromKm === '-1') {
-      return 0;
+      return {
+        $gte: 0,
+      };
     }
-    return Number(mileageFromKm);
+    return {
+      $gte: Number(mileageFromKm),
+    };
   };
 
-  const mileageUpToKmNumber = () => {
+  const mileageUpToKmQuery = () => {
     if (mileageUpToKm === '-1') {
-      return 999999999999999;
+      return {
+        $lte: 9999999,
+      };
     }
-    return Number(mileageUpToKm);
+    return {
+      $lte: Number(mileageUpToKm),
+    };
   };
 
-  const powerFromHPKmNumber = () => {
-    if (powerFromHP === '-1') {
-      return 0;
-    }
-    return Number(powerFromHP);
-  };
+  // battery
 
-  const powerToHPNumber = () => {
-    if (powerToHP === '-1') {
-      return 999999999999999;
-    }
-    return Number(powerToHP);
-  };
-
-  const batteryCapacityFromKWHNumber = () => {
+  const batteryCapacityFromKWHQuery = () => {
     if (batteryCapacityFromKWH === '-1') {
-      return 0;
+      return {
+        $gte: 0,
+      };
     }
-    return Number(batteryCapacityFromKWH);
+    return {
+      $gte: Number(batteryCapacityFromKWH),
+    };
   };
 
-  const batteryCapacityToKWHNumber = () => {
+  const batteryCapacityToKWHQuery = () => {
     if (batteryCapacityToKWH === '-1') {
-      return 999999999999999;
+      return {
+        $lte: 9999999,
+      };
     }
-    return Number(batteryCapacityToKWH);
+    return {
+      $lte: Number(batteryCapacityToKWH),
+    };
+  };
+
+  // power
+
+  const powerFromHPQuery = () => {
+    if (powerFromHP === '-1') {
+      return {
+        $gte: 0,
+      };
+    }
+    return {
+      $gte: Number(powerFromHP),
+    };
+  };
+
+  const powerToHPQuery = () => {
+    if (powerToHP === '-1') {
+      return {
+        $lte: 9999999,
+      };
+    }
+    return {
+      $lte: Number(powerToHP),
+    };
+  };
+
+  // doors
+
+  const numberOfDoorsQuery = () => {
+    if (numberOfDoors === '3') {
+      return [
+        {
+          $gte: 2,
+        },
+        {
+          $lte: 3,
+        },
+      ];
+    }
+    if (numberOfDoors === '5') {
+      return [
+        {
+          $gte: 4,
+        },
+        {
+          $lte: 5,
+        },
+      ];
+    }
+    return [
+      {
+        $exists: true,
+      },
+      {
+        $exists: true,
+      },
+    ];
+  };
+
+  // seats
+
+  const numberOfSeatsQuery = () => {
+    if (numberOfSeats === '2') {
+      return {
+        $eq: Number(numberOfSeats),
+      };
+    }
+    if (numberOfSeats === '4') {
+      return {
+        $eq: Number(numberOfSeats),
+      };
+    }
+    if (numberOfSeats === '5') {
+      return {
+        $eq: Number(numberOfSeats),
+      };
+    }
+    return {
+      $exists: true,
+    };
+  };
+
+  // equipment
+
+  const optionalEquipmentQuery = () => {
+    if (optionalEquipment.length === 0) {
+      return {
+        $exists: true,
+      };
+    }
+    return {
+      $in: optionalEquipment,
+    };
+  };
+
+  // exterior color
+
+  const exteriorColorQuery = () => {
+    if (exteriorColor.length === 0) {
+      return {
+        $exists: true,
+      };
+    }
+    return {
+      $in: exteriorColor,
+    };
+  };
+
+  // interior color
+
+  const interiorColorQuery = () => {
+    if (interiorColor.length === 0) {
+      return {
+        $exists: true,
+      };
+    }
+    return {
+      $in: interiorColor,
+    };
+  };
+
+  // upholstery
+
+  const upholsteryQuery = () => {
+    if (upholstery.length === 0) {
+      return {
+        $exists: true,
+      };
+    }
+    return {
+      $in: upholstery,
+    };
   };
 
   try {
     const cars = await CarModel.find({
-      modelId: modelIdString(),
-      registration: {
-        $gt: firstRegistrationFromYearNumber(),
-        $lt: firstRegistrationToYearNumber(),
-      },
-      price: {
-        $gt: priceFromAmountNumber(),
-        $lt: priceUpToAmountNumber(),
-      },
-      mileage: {
-        $gt: mileageFromKmNumber(),
-        $lt: mileageUpToKmNumber(),
-      },
-      power: {
-        $gt: powerFromHPKmNumber(),
-        $lt: powerToHPNumber(),
-      },
-      battery: {
-        $gt: batteryCapacityFromKWHNumber(),
-        $lt: batteryCapacityToKWHNumber(),
-      },
+      $and: [
+        {
+          modelId: await modelIdQuery(),
+        },
+        {
+          registration: firstRegistrationFromYearQuery(),
+        },
+        {
+          registration: firstRegistrationToYearQuery(),
+        },
+        {
+          price: priceFromAmountQuery(),
+        },
+        {
+          price: priceUpToAmountQuery(),
+        },
+        {
+          mileage: mileageFromKmQuery(),
+        },
+        {
+          mileage: mileageUpToKmQuery(),
+        },
+        {
+          battery: batteryCapacityFromKWHQuery(),
+        },
+        {
+          battery: batteryCapacityToKWHQuery(),
+        },
+        {
+          power: powerFromHPQuery(),
+        },
+        {
+          power: powerToHPQuery(),
+        },
+        {
+          doors: numberOfDoorsQuery()[0],
+        },
+        {
+          doors: numberOfDoorsQuery()[1],
+        },
+        {
+          seats: numberOfSeatsQuery(),
+        },
+        {
+          equipment: optionalEquipmentQuery(),
+        },
+        {
+          exteriorColor: exteriorColorQuery(),
+        },
+        {
+          interiorColor: interiorColorQuery(),
+        },
+        {
+          upholstery: upholsteryQuery(),
+        },
+      ],
     });
     const models = await ModelModel.find();
     const brands = await BrandModel.find();

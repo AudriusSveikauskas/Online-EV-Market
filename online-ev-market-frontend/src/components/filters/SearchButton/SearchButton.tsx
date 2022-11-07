@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { RootState } from '@/store/store';
 import post from '@/services/fetch/post';
 import { carsActions } from '@/store/api/cars';
+import { mainMenuActions } from '@/store/menu/main-menu';
+import { searchActions } from '@/store/search/search';
 
 const SearchButton: React.FC = () => {
   const dispatch = useDispatch();
@@ -18,6 +20,28 @@ const SearchButton: React.FC = () => {
     dispatch(carsActions.setCars(cars));
   };
 
+  const resetMenuPageState = () => {
+    dispatch(mainMenuActions.setPage(''));
+  };
+
+  const resetSearchFilter = () => {
+    dispatch(searchActions.setMakeId('-1'));
+    dispatch(searchActions.setModelId('-1'));
+    dispatch(searchActions.setFirstRegistrationFromYear('-1'));
+    dispatch(searchActions.setFirstRegistrationToYear('-1'));
+    dispatch(searchActions.setPriceFromAmount('-1'));
+    dispatch(searchActions.setPriceUpToAmount('-1'));
+    dispatch(searchActions.setMileageFromKm('-1'));
+    dispatch(searchActions.setMileageUpToKm('-1'));
+    dispatch(searchActions.setNumberOfDoors('-1'));
+    dispatch(searchActions.setNumberOfSeats('-1'));
+    dispatch(searchActions.setBatteryCapacityFromKWH('-1'));
+    dispatch(searchActions.setBatteryCapacityToKWH('-1'));
+    dispatch(searchActions.setPowerFromHP('-1'));
+    dispatch(searchActions.setPowerToHP('-1'));
+    dispatch(searchActions.resetAllStateArrays());
+  };
+
   async function getCars() {
     const carsArr = await post('filter-cars', filters);
     setCarsHandler(carsArr.data.cars);
@@ -25,6 +49,8 @@ const SearchButton: React.FC = () => {
 
   const onClickHandler = async () => {
     getCars();
+    resetMenuPageState();
+    resetSearchFilter();
     navigate('../cars');
   };
 
