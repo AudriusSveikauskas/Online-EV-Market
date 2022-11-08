@@ -11,20 +11,7 @@ import AddToFavoriteButton from '@/components/basics/Buttons/AddToFavoriteButton
 const AdsListing = () => {
   const dispatch = useDispatch();
 
-  const [cars] = useState<CarProps[]>([
-    {
-      _id: '-1',
-      battery: -1,
-      doors: -1,
-      mileage: -1,
-      modelId: '-1',
-      photo1: '-1',
-      power: -1,
-      price: -1,
-      registration: -1,
-      userId: '-1',
-    },
-  ]);
+  const [cars] = useState<CarProps[]>([]);
   const [models, setModels] = useState([]);
   const [brands, setBrands] = useState([]);
 

@@ -77,13 +77,13 @@ const AdminSettings = () => {
           <EquipmentSettings />
         </TabPanel>
         <TabPanel value={value} index={6}>
-          Item One
+          Exterior Colour
         </TabPanel>
         <TabPanel value={value} index={7}>
-          Item Two
+          Interior Colour
         </TabPanel>
         <TabPanel value={value} index={8}>
-          Item Three
+          Interior material
         </TabPanel>
       </Box>
     </Container>

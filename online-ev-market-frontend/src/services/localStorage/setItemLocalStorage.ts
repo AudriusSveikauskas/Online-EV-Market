@@ -1,6 +1,6 @@
 import getItemLocalStorage from '@/services/localStorage/getItemLocalStorage';
 
-type CarProps = {
+export type CarProps = {
   _id: string;
   carName: string;
   price: number;

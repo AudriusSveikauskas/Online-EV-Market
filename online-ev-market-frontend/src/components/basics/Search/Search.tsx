@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Box, Button } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
-import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import MakeFilter from '@/components/filters/BasicData/Make/MakeFilter';
