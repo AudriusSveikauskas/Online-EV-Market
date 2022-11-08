@@ -10,6 +10,7 @@ import FirstRegistrationFromFilter from '@/components/filters/BasicData/FirstReg
 import PriceUpToAmountFilter from '@/components/filters/BasicData/Price/PriceUpToAmountFilter';
 import MileageUpToKmFilter from '@/components/filters/BasicData/Mileage/MileageUpToKmFilter';
 import { mainMenuActions } from '@/store/menu/main-menu';
+import SearchButton from '@/components/filters/SearchButton/SearchButton';
 
 const Search: React.FC = () => {
   const dispatch = useDispatch();
@@ -67,14 +68,7 @@ const Search: React.FC = () => {
           </Grid>
 
           <Grid xs={12} md={4} sx={{ display: 'flex' }}>
-            <Button
-              type="submit"
-              variant="contained"
-              startIcon={<SearchIcon />}
-              sx={{ flexGrow: 1 }}
-            >
-              Search
-            </Button>
+            <SearchButton />
           </Grid>
 
           <Grid xs={12} sx={{ display: 'flex' }}>

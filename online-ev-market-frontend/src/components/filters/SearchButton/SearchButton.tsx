@@ -55,19 +55,14 @@ const SearchButton: React.FC = () => {
   };
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-      <Button
-        onClick={onClickHandler}
-        sx={{
-          width: { xs: '80%', sm: '70%', md: '60%', lg: '50%' },
-        }}
-        variant="contained"
-        size="large"
-        startIcon={<SearchIcon />}
-      >
-        Search
-      </Button>
-    </Box>
+    <Button
+      onClick={onClickHandler}
+      sx={{ flexGrow: 1 }}
+      variant="contained"
+      startIcon={<SearchIcon />}
+    >
+      Search
+    </Button>
   );
 };
 

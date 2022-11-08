@@ -6,6 +6,7 @@ import get from '@/services/fetch/get';
 import CarDetailsButton from '@/components/basics/Buttons/CarDetailsButton';
 import { RootState } from '@/store/store';
 import { carsActions } from '@/store/api/cars';
+import AddToFavoriteButton from '@/components/basics/Buttons/AddToFavoriteButton';
 
 const AdsListing = () => {
   const dispatch = useDispatch();
@@ -84,36 +85,96 @@ const AdsListing = () => {
     >
       {Array.from(carsArray).map((car) => (
         <Card sx={{ display: 'flex', p: 4 }} key={car._id}>
-          <Box sx={{ display: 'flex', gap: 4 }}>
+          <Box
+            sx={{
+              display: 'flex',
+              gap: { xs: 1, sm: 2, md: 3, lg: 4 },
+              flexGrow: 1,
+            }}
+          >
             <Avatar
               variant="square"
               alt={car._id}
               src={car.photo1}
               sx={{ height: '250px', width: '334px' }}
             />
+
             <Box
               sx={{
                 display: 'flex',
-                flexDirection: 'column',
                 justifyContent: 'space-between',
+                flexGrow: 1,
+                gap: { xs: 1, sm: 2, md: 3, lg: 4 },
               }}
             >
-              <Typography variant="h5">
-                {`${getFullName(car.modelId)}`}
-              </Typography>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 1,
+                  flexGrow: 1,
+                  justifyContent: 'space-between',
+                }}
+              >
+                <Typography variant="h5" sx={{ mt: 2 }}>
+                  {`${getFullName(car.modelId)}`}
+                </Typography>
 
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                <Typography>{`First registration: ${car.registration}`}</Typography>
-                <Typography>{`Mileage: ${car.mileage} km`}</Typography>
-                <Typography>{`Battery capacity: ${car.battery} kWh`}</Typography>
-                <Typography>{`Power: ${car.power} hp`}</Typography>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 1,
+                    mb: 2,
+                  }}
+                >
+                  <Typography>{`First registration: ${car.registration}`}</Typography>
+                  <Typography>{`Mileage: ${car.mileage} km`}</Typography>
+                  <Typography>{`Battery capacity: ${car.battery} kWh`}</Typography>
+                  <Typography>{`Power: ${car.power} hp`}</Typography>
+                </Box>
               </Box>
 
-              <Typography variant="h5">{`${car.price} €`}</Typography>
-              <CarDetailsButton
-                _id={car._id}
-                carName={getFullName(car.modelId)}
-              />
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexGrow: 1,
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    flexGrow: 1,
+                  }}
+                >
+                  <Typography sx={{ alignSelf: 'center' }} variant="h4">
+                    {`${car.price} €`}
+                  </Typography>
+                </Box>
+
+                <Box
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 2,
+                    mb: 2,
+                  }}
+                >
+                  <AddToFavoriteButton
+                    _id={car._id}
+                    carName={getFullName(car.modelId)}
+                    price={car.price}
+                    photo={car.photo1}
+                  />
+                  <CarDetailsButton
+                    _id={car._id}
+                    carName={getFullName(car.modelId)}
+                  />
+                </Box>
+              </Box>
             </Box>
           </Box>
         </Card>

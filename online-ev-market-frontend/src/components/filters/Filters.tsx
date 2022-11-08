@@ -15,7 +15,16 @@ const Filters = () => (
     <Equipment />
     <Exterior />
     <Interior />
-    <SearchButton />
+    <Box
+      sx={{
+        flexGrow: 1,
+        display: 'flex',
+        justifyContent: 'center',
+        paddingX: { xs: 4, sm: 8, md: 16, lg: 32 },
+      }}
+    >
+      <SearchButton />
+    </Box>
   </Box>
 );
 

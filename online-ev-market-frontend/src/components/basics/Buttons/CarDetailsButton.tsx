@@ -23,6 +23,7 @@ const CarDetailsButton: React.FC<CarDetailsButtonProps> = ({
     <Button
       onClick={onclickHandle}
       variant="contained"
+      size="large"
       startIcon={<DirectionsCarIcon />}
     >
       Co to car details

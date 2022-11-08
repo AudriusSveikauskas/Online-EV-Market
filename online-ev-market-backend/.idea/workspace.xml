@@ -4,19 +4,15 @@
     <list default="true" id="006c7d5d-26e2-4007-ada7-678985b8819c" name="Changes" comment="init commit">
       <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/helpers/resetSearchState.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/Buttons/AddToFavoriteButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/car/filterCarsController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/car/filterCarsController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/Buttons/CarDetailsButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/Buttons/CarDetailsButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/basics/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/Filters.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/Filters.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/SearchButton/SearchButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/SearchButton/SearchButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/TechnicalData/BatteryCapacity/BatteryCapacityFromFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/TechnicalData/BatteryCapacity/BatteryCapacityFromFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/TechnicalData/BatteryCapacity/BatteryCapacityToFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/TechnicalData/BatteryCapacity/BatteryCapacityToFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/TechnicalData/Power/PowerFromFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/TechnicalData/Power/PowerFromFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/TechnicalData/Power/PowerToFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/filters/TechnicalData/Power/PowerToFilter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/navigation/menu/MainMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/components/navigation/menu/MainMenu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/AdsListing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/AdsListing.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/pages/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/store/search/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/store/search/search.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/localStorage/getItem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/localStorage/getItemLocalStorage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/localStorage/setItem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../online-ev-market-frontend/src/services/localStorage/setItemLocalStorage.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +118,8 @@
       <workItem from="1667786707086" duration="713000" />
       <workItem from="1667787796936" duration="408000" />
       <workItem from="1667800844415" duration="17000" />
-      <workItem from="1667800878419" duration="10827000" />
+      <workItem from="1667800878419" duration="12189000" />
+      <workItem from="1667934449054" duration="924000" />
     </task>
     <task id="LOCAL−00001" summary="init commit">
       <created>1666822996329</created>
