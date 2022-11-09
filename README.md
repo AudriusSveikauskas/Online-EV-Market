@@ -3,7 +3,7 @@
 
 Run BACKEND:
 
-> Enter your MongoDB connection String URI:
+> Enter your MongoDB connection string URI in an .env file:
 
 ![This is an image](/screenshots/env_back.jpg)
 
